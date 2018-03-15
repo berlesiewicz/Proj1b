@@ -13,7 +13,7 @@ int main()
     cin >> per1.surname;
     cout << "Write pseudonym: ";
     cin >> per1.pseudonym;
-    cout << endl << per1.name << " \"" << per1.pseudonym << "\" " << per1.surname;
+    cout << endl << per1.name << " " << per1.surname << " \"" << per1.pseudonym << "\"";
     cout << endl;
     return 0;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm> //do funkcji reverse
 #include "person.h"
 //#include "perfun.h"
 
@@ -27,11 +28,13 @@ int main()
     cin >> per1.surname;
     cout << "Write pseudonym: ";
     cin >> per1.pseudonym;
-    cout << endl << per1.name << " \"" << per1.pseudonym << "\" " << per1.surname;
     per1.name=replz(per1.name);
     per1.surname=replz(per1.surname);
     per1.pseudonym=replz(per1.pseudonym);
-    cout << endl << per1.name << " \"" << per1.pseudonym << "\" " << per1.surname;
+    reverse(per1.name.begin(), per1.name.end());
+    reverse(per1.surname.begin(), per1.surname.end());
+    reverse(per1.pseudonym.begin(), per1.pseudonym.end());
+    cout << endl << per1.name << " " << per1.surname << " \"" << per1.pseudonym << "\"";
     cout << endl;
     return 0;
 }
